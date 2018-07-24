@@ -1,14 +1,31 @@
 const unhandled = require('electron-unhandled')
+const React = require('react')
+const {dialog} = require('electron').remote
+const { ipcRenderer } = require('electron')
+
 unhandled()
 
-const {dialog} = require('electron').remote
-
-const { ipcRenderer } = require('electron')
 ipcRenderer.on('New Game', function (event, msg)  {
     board = [['B', 'B', 'B'], ['B', 'B', 'B'], ['B', 'B', 'B']]
     var ctx = GUI.getContext('2d')
     ctx.clearRect(0,0,GUI.width, GUI.height)
 }) // 'Yay'
+
+class Game
+{
+    constructor() {
+        this.board = [['B', 'B', 'B'], ['B', 'B', 'B'], ['B', 'B', 'B']]
+    }
+
+    print() {
+        console.log(this.board[0][0])
+    }
+
+    //var board = [['B', 'B', 'B'], ['B', 'B', 'B'], ['B', 'B', 'B']]
+}
+
+var myGame = new Game()
+myGame.print()
 
 var board = [['B', 'B', 'B'], ['B', 'B', 'B'], ['B', 'B', 'B']]
 var grid = [[null, null, null], [null, null, null], [null, null, null]] // not used
