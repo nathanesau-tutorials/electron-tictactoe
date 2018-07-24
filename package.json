@@ -7,5 +7,9 @@
   },
   "scripts": {
     "start": "electron ."
+  },
+  "dependencies": {
+    "electron-unhandled": "^1.1.0",
+    "eslint": "^5.2.0"
   }
 }
