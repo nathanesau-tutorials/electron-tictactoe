@@ -13,6 +13,8 @@ module.exports = {
             "tab"
         ],
         'no-console': 'off',
+        'no-undef': 'off',
+        'indent' : 'off',
         "linebreak-style": [
             "error",
             "windows"
