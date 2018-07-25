@@ -149,15 +149,20 @@ GUI.addEventListener('click', function (event) {
         }
         updateBoard(humanMove)
         draw(humanMove)
+
+        doComputerMove = function() {
+            const aiMove = getAIMove()
+            updateBoard(aiMove)
+            draw(aiMove)
+        }
+
         // sleep here!
         if (getWinner() == 'X') {
             showMessage('X wins')
         } else if (isFull()) {
             showMessage('Board full')
         } else {
-            const aiMove = getAIMove()
-            updateBoard(aiMove)
-            draw(aiMove)
+            setTimeout(doComputerMove, 250)
             if (getWinner() == 'O') {
                 showMessage('O wins')
             } else if (isFull()) {
