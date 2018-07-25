@@ -9,9 +9,11 @@ const template = [
         label: 'File',
         submenu: [
             {
-                label: 'New Game', click() {
+                label: 'New Game',
+                click: function() {
                     win.webContents.send('New Game', '')
-                }
+                },
+                accelerator: 'CmdOrCtrl + N'
             }
         ]
     }
