@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "electron-unhandled": "^1.1.0",
-    "eslint": "^5.2.0"
+    "eslint": "^5.2.0",
+    "react": "^16.4.1"
   }
 }
