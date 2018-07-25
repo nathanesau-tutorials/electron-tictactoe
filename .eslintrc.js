@@ -15,10 +15,8 @@ module.exports = {
         'no-console': 'off',
         'no-undef': 'off',
         'indent' : 'off',
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
+        "linebreak-style": 'off', // windows and linux are different
+        'no-unused-vars': 'off',
         "quotes": [
             "error",
             "single"
