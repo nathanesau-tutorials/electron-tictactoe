@@ -165,27 +165,14 @@ const onClick = function(event) {
             row: row,
             col: col
         }
-<<<<<<< HEAD
         gui.board.update(humanMove)
         gui.draw(humanMove)
-=======
-        updateBoard(humanMove)
-        draw(humanMove)
-
-        doComputerMove = function() {
-            const aiMove = getAIMove()
-            updateBoard(aiMove)
-            draw(aiMove)
-        }
-
->>>>>>> master
         // sleep here!
         if (gui.board.getWinner() == 'X') {
             gui.showMessage('X wins')
         } else if (gui.board.isFull()) {
             gui.showMessage('Board full')
         } else {
-<<<<<<< HEAD
             const aiMove = gui.ai.getMove(gui.board)
             gui.board.update(aiMove)
             gui.draw(aiMove)
@@ -193,13 +180,6 @@ const onClick = function(event) {
                 gui.showMessage('O wins')
             } else if (gui.board.isFull()) {
                 gui.showMessage('Board full')
-=======
-            setTimeout(doComputerMove, 250)
-            if (getWinner() == 'O') {
-                showMessage('O wins')
-            } else if (isFull()) {
-                showMessage('Board full')
->>>>>>> master
             }
         }
     }
